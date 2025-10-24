@@ -11,8 +11,8 @@ const Header: React.FC<HeaderProps> = ({ searchQuery, setSearchQuery }) => {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
-                        <div className="bg-blue-500/10 p-3 rounded-lg border border-blue-500/20">
-                             <img src="https://cdn.jsdelivr.net/gh/ginting719/Audio/LOGO-01.png" alt="Logo Icon"  className="w-6 h-6"/>
+                        <div>
+                             <img src="https://cdn.jsdelivr.net/gh/ginting719/Audio/LOGO-01.png" alt="Logo Icon"  className="w-12 h-12"/>
                         </div>
                         <div>
                             <h1 className="text-xl font-bold tracking-wide">Receiving Journey</h1>
