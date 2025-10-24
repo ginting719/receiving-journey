@@ -12,10 +12,10 @@ const Header: React.FC<HeaderProps> = ({ searchQuery, setSearchQuery }) => {
                 <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
                         <div className="bg-blue-500/10 p-3 rounded-lg border border-blue-500/20">
-                             <i className="fas fa-boxes-stacked text-2xl text-blue-400"></i>
+                             <img src="https://cdn.jsdelivr.net/gh/ginting719/Audio/LOGO-01.png" alt="Logo Icon"  className="w-6 h-6"/>
                         </div>
                         <div>
-                            <h1 className="text-xl font-bold tracking-wide">Training Hub</h1>
+                            <h1 className="text-xl font-bold tracking-wide">Receiving Journey</h1>
                             <p className="text-blue-300/70 text-xs">Goods Receiving</p>
                         </div>
                     </div>
