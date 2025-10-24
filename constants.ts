@@ -4,7 +4,7 @@ export const RECEIVING_MODULES: ReceivingModule[] = [
   {
     id: 'apd',
     title: 'Receiving by APD',
-    description: 'Pelajari proses lengkap untuk menerima barang melalui APD, mulai dari pemeriksaan awal hingga entri sistem.',
+    description: 'Ini adalah module receiving barang dari supplier Internal APD',
     checklistUrl: 'https://drive.google.com/uc?export=download&id=1QSCr9VWBVYl66rEPX49rFtua_obsUdAc',
     materials: [
       { id: 'apd-mindmap', type: ContentType.MindMap, title: 'Mindmap Overview', content: 'https://cdn.jsdelivr.net/gh/ginting719/Audio/APD.jpeg' },
