@@ -35,10 +35,10 @@ const App: React.FC = () => {
             <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="text-center mb-12">
                     <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-                        Training Modules
+                        Receiving Journey Modules
                     </h1>
                     <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-400">
-                        Select a module to begin your training on warehouse receiving procedures.
+                        Pilih modules berdasarkan supplier yang datang, selamat mempelajari prosedur receiving ini
                     </p>
                 </div>
                 <ModuleGrid 
