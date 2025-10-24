@@ -12,7 +12,7 @@ const Header: React.FC<HeaderProps> = ({ searchQuery, setSearchQuery }) => {
                 <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
                         <div>
-                             <img src="https://cdn.jsdelivr.net/gh/ginting719/Audio/LOGO-01.png" alt="Logo Icon"  className="w-12 h-12"/>
+                             <img src="https://cdn.jsdelivr.net/gh/ginting719/Audio/LOGO-01.png" alt="Logo Icon"  className="w-16 h-16"/>
                         </div>
                         <div>
                             <h1 className="text-xl font-bold tracking-wide">Receiving Journey</h1>
