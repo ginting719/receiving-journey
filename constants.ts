@@ -17,7 +17,7 @@ export const RECEIVING_MODULES: ReceivingModule[] = [
     ]
   },
   {
-    id: 'eksternal',
+    id: 'external',
     title: 'Receiving by Eksternal',
     description: 'Ini adalah module receiving barang dari supplier Internal APD',
     checklistUrl: 'https://drive.google.com/file/d/1SddyQkAYe6bdxWLsSDhS6y6qz8_fIYay/view?usp=sharing',
