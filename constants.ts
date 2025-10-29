@@ -4,7 +4,7 @@ export const RECEIVING_MODULES: ReceivingModule[] = [
   {
     id: 'apd',
     title: 'Receiving by APD',
-    description: 'Ini adalah module receiving barang dari supplier Internal APD',
+    description: 'Pelajari proses lengkap untuk menerima barang melalui APD, mulai dari pemeriksaan awal hingga entri sistem.',
     checklistUrl: 'https://drive.google.com/uc?export=download&id=1QSCr9VWBVYl66rEPX49rFtua_obsUdAc',
     materials: [
       { id: 'apd-mindmap', type: ContentType.MindMap, title: 'Mindmap Overview', content: 'https://cdn.jsdelivr.net/gh/ginting719/Audio/APD.jpeg' },
@@ -19,16 +19,15 @@ export const RECEIVING_MODULES: ReceivingModule[] = [
   {
     id: 'eksternal',
     title: 'Receiving by Eksternal',
-    description: 'Ini adalah module receiving barang dari supplier Internal APD',
-    checklistUrl: 'https://drive.google.com/file/d/1SddyQkAYe6bdxWLsSDhS6y6qz8_fIYay/view?usp=sharing',
+    description: 'Kuasai prosedur untuk menangani pengiriman yang datang dari pemasok dan vendor eksternal.',
     materials: [
-      { id: 'ext-mindmap', type: ContentType.MindMap, title: 'https://www.canva.com/design/DAG2y0H8DK8/e2oxuD7rc3La-0D7Z9c_lQ/edit?utm_content=DAG2y0H8DK8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton' },
-      { id: 'ext-ik', type: ContentType.PPT, title: 'SOP/IK', content: 'https://drive.google.com/file/d/1M0TSnLqMyLqWLvJM8sRp8UTfa5DHn_L7/view?usp=sharing' },
-      { id: 'ext-slide', type: ContentType.PPT, title: 'Slide Presentasi', content: 'https://chat.z.ai/space/h0z179ahgf90-ppt' },
-      { id: 'ext-video1', type: ContentType.Video, title: 'Video 1', content: 'https://youtu.be/XPqzvbKPWOU' },
-      { id: 'ext-video2', type: ContentType.Video, title: 'Video 2', content: 'https://youtu.be/p23FZET3mQs' },
-      { id: 'ext-podcast', type: ContentType.Podcast, title: 'Podcast', content: 'https://drive.google.com/file/d/1mPSpS38iNdunV3o0B-GkNolqYVXBXyth/view?usp=sharing' },
-      { id: 'ext-qa', type: ContentType.ExternalLink, title: 'Q&A', content: 'https://chat.z.ai/space/k0s109ec72z1-art' },
+      { id: 'ext-map', type: ContentType.MindMap, title: 'Peta Pikiran Proses', content: 'https://picsum.photos/seed/extmap/1280/720' },
+      { id: 'ext-vid', type: ContentType.Video, title: 'Video Tutorial', content: 'https://www.youtube.com/embed/n5s2-p_1x_8' },
+      { id: 'ext-ppt', type: ContentType.PPT, title: 'Presentasi', content: '/downloads/receiving_eksternal.pptx' },
+      { id: 'ext-qna', type: ContentType.QnA, title: 'Tanya Jawab', content: [
+        { question: 'Bagaimana cara memverifikasi pemasok eksternal?', answer: 'Periksa Purchase Order (PO) dan pastikan nama pemasok sesuai dengan dokumentasi.' },
+        { question: 'Apa yang harus dilakukan jika segel rusak pada kiriman eksternal?', answer: 'Jangan terima kiriman. Dokumentasikan dengan foto dan hubungi manajer logistik.' }
+      ]}
     ]
   },
   {
