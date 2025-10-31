@@ -7,21 +7,13 @@ export enum ContentType {
   ExternalLink = 'external',
 }
 
-export interface QnAItem {
-  question: string;
-  answer: string;
-}
-
 // Represents a single piece of learning material within a larger module.
 export interface TutorialMaterial {
   id: string;
   type: ContentType;
   title: string;
-  // For MindMap: image URL
-  // For Video: YouTube embed URL
-  // For PPT: download link
-  // For QnA: QnAItem[]
-  content: string | QnAItem[]; 
+  // All content is now represented by a URL string.
+  content: string; 
 }
 
 // Represents a main training topic, containing multiple materials.
@@ -31,4 +23,11 @@ export interface ReceivingModule {
     description: string;
     materials: TutorialMaterial[];
     checklistUrl?: string;
+}
+
+// FIX: Add QnAItem interface to resolve missing export error.
+// Represents a question and answer pair.
+export interface QnAItem {
+  question: string;
+  answer: string;
 }

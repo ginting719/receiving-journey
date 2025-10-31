@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { ReceivingModule, ContentType, TutorialMaterial, QnAItem } from '../types';
+import { ReceivingModule, ContentType, TutorialMaterial } from '../types';
 
 interface ModalProps {
     module: ReceivingModule;
@@ -26,21 +26,8 @@ const MaterialIcon: React.FC<{ type: ContentType }> = ({ type }) => {
     }
 }
 
-const ModuleQnA: React.FC<{items: QnAItem[]}> = ({ items }) => {
-    return (
-        <div className="space-y-4">
-            {items.map((item, index) => (
-                <div key={index} className="bg-gray-900/50 p-4 rounded-lg border border-gray-700/50">
-                    <h4 className="font-semibold text-blue-300 mb-1">{item.question}</h4>
-                    <p className="text-gray-400 text-sm">{item.answer}</p>
-                </div>
-            ))}
-        </div>
-    )
-}
-
 const getEmbedUrl = (material: TutorialMaterial): string => {
-    const url = material.content as string;
+    const url = material.content;
     
     // YouTube: convert watch/shortened URLs to embed URLs
     if (url.includes('youtube.com/watch')) {
@@ -89,33 +76,8 @@ const getEmbedUrl = (material: TutorialMaterial): string => {
 
 
 const ContentRenderer: React.FC<{ material: TutorialMaterial }> = ({ material }) => {
-    if (material.type === ContentType.QnA) {
-        return <ModuleQnA items={material.content as QnAItem[]} />;
-    }
-
-    if (material.type === ContentType.ExternalLink) {
-        return (
-            <div className="flex flex-col items-center justify-center h-full text-center p-8 bg-gray-900/50 rounded-lg">
-                <i className="fas fa-external-link-alt text-5xl text-yellow-400 mb-6"></i>
-                <h3 className="text-2xl font-bold text-white mb-2">Materi Eksternal</h3>
-                <p className="text-gray-400 mb-8 max-w-md">
-                    Materi ini akan dibuka di jendela browser baru karena kebijakan keamanan dari penyedia konten.
-                </p>
-                <a
-                    href={material.content as string}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:ring-offset-gray-800 transition-transform hover:scale-105"
-                >
-                    Buka Materi di Tab Baru
-                    <i className="fas fa-arrow-right ml-3"></i>
-                </a>
-            </div>
-        );
-    }
-    
     if (material.type === ContentType.MindMap) {
-        const imageUrl = material.content as string;
+        const imageUrl = material.content;
         return (
             <div className="relative w-full h-full bg-black/20 rounded-lg overflow-hidden border border-gray-700 flex items-center justify-center">
                 <img 
@@ -127,8 +89,8 @@ const ContentRenderer: React.FC<{ material: TutorialMaterial }> = ({ material })
         );
     }
 
-    // Handle all other embeddable content (Video, PPT, Podcast) with iframes
-    if ([ContentType.Video, ContentType.PPT, ContentType.Podcast].includes(material.type)) {
+    // Handle all other embeddable content (Video, PPT, Podcast, ExternalLink) with iframes
+    if ([ContentType.Video, ContentType.PPT, ContentType.Podcast, ContentType.ExternalLink].includes(material.type)) {
         const embedUrl = getEmbedUrl(material);
 
         return (
@@ -138,7 +100,7 @@ const ContentRenderer: React.FC<{ material: TutorialMaterial }> = ({ material })
                     src={embedUrl}
                     title={material.title}
                     frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
                 ></iframe>
             </div>
