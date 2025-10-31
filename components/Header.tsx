@@ -15,7 +15,7 @@ const Header: React.FC<HeaderProps> = ({ searchQuery, setSearchQuery }) => {
                              <i className="fas fa-boxes-stacked text-2xl text-blue-400"></i>
                         </div>
                         <div>
-                            <h1 className="text-xl font-bold tracking-wide">Training Hub</h1>
+                            <h1 className="text-xl font-bold tracking-wide">Receiving Journey</h1>
                             <p className="text-blue-300/70 text-xs">Goods Receiving</p>
                         </div>
                     </div>
